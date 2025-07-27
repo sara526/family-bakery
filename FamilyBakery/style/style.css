@@ -17,25 +17,31 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.11);
 }
-.logo{
-    width: 10%;
+.navbar .logo{
+    width: 8%;
 }
 /* <a> & <img> inline element not response (width and height) */
-.logo img{
+.navbar .logo img{
     width: 100%;
     justify-content: space-between;
-    border: 1px solid;
+    border: 1px solid black;
     border-radius: 50%;
 }
-nav ul{
+.navbar ul{
     display: flex;
     list-style: none;
     gap: 2rem;
 }
-a{
+.navbar li a{
     color: white;
     text-decoration: none;
+    font-size: 1.2rem;
 }
+/* All paragraphs */
+p{
+    font-size: 1.2rem;
+}
+/* landing section */
 .container{
     background-image: url("../media/bg copy.jpg");
     background-position: center center; 
@@ -52,46 +58,54 @@ a{
     color: white;
     margin: 20px;
 }
-button{
+.header p{
+    padding: 10px 0;
+}
+header button{
     color: white;
     font-size: medium;
     background-color: transparent;
     border: 1px solid white;
-    border-radius: 5px;
-    padding: 7px;
-    margin: 7px;
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 10px;
     cursor: pointer; 
+}
+.btn-1{
+    background-color: #897554;
+    border: none;
 }
 /* About */
 #about{
     display: flex;
-    width: 90%;
+    width: 95%;
+    height: 100%;
     margin: auto;
-    /* background-color: bisque; */
+    justify-content: space-around;
 }
 .about-content{
-    width: 50%;
+    /* width: 50%; */
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 0 20px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 15px;
 }
 .about-content img{
-    width: 80%;
+    width: 100%;
+    height: 100%;
     margin-top: 20px;
 }
-.about-content p{
-    font-size: 17px;
+/* .about-content p{
     text-align: center;
-}
+} */
 .about-content ul{
     display: flex;
     flex-direction: column;
+    list-style: symbols(circle);
 }
-.about-content li{
-    display: flex;
-    flex-direction: column;
-    font-size: 17px;
+.about-content ul li{
     text-align: left;
 }
 /* location section */
@@ -107,6 +121,7 @@ button{
     padding: 0 20px;
 }
 #main{
+    justify-content: center;
     text-align: center;
     padding: 20px;
 }
@@ -118,28 +133,25 @@ button{
    width: 80%;
 }
 /*parent*/
- .baking-section{ 
+.baking-section{ 
     width: 70%;
-    margin: auto;
-    margin-top: 30px;
+    margin: 10px auto;
 } 
-.baking-section h4{
-    text-align: center;
-}
-.baking-section .text{
+.baking-section .baking-title{
+    margin: 20px 0;
     text-align: center;
 }
 .child{
     width: 32%;
     display: inline-block;
 }
-.child img {
+.child img{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
 }
-h5{
+.baking-section h5{
     text-align: center;
-    margin: 5px 0;;
+    margin: 5px 0;
 } 
 .child p{
     text-align: center;
@@ -147,17 +159,22 @@ h5{
 /* last section */
 .iframe{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 70%;
 }
 .my-location{
-    display: flex;
-    width: 70%;
-    justify-content: center;
-    align-items: center;
-    margin: 5px auto;
-
+    /* display: flex;
+    flex-direction: column; */
+    width: 100%;
+    height: 100%;
+    /* justify-content: space-between; */
+    margin: 10px auto;
 }
+
 iframe{
-    height: 350px;
+    height: 300px;
     width: 350px;
     border: none;
     border-radius: 50px;
@@ -172,7 +189,6 @@ iframe{
     margin: auto;
     padding: 70px 0;
     height: 100%;
-
 }
 .row{
     display: flex;
@@ -185,9 +201,9 @@ iframe{
 .footer ul{
     list-style-type: none;
 }
-.footer-links a {
+.col-footer a {
     text-decoration: none;
-    color: chocolate;
+    color: #ffff;
 }
 .col-footer{
     width: 25%;
@@ -203,8 +219,16 @@ iframe{
     transition: 1s;
 }
 .col-footer ul li a:hover{
-    padding-left: 10px;
+    /* padding-top: 15px; */
+    zoom: 1.5;
 }
+.col-footer .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
 .col-footer ul li:not(:last-child){
     margin-bottom: 10px;
     text-transform: capitalize;
