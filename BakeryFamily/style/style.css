@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Miniver&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Miniver&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lekton:ital,wght@0,400;0,700;1,400&display=swap'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Great Vibes", cursive; */
+    font-family: "Lobster Two", sans-serif;
+}
+.container{
+    background-image: url("../media/bg copy.jpg");
+    background-position: center center; 
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;  
+    padding: 15px; 
+    position: fixed;
+    /* you should add right & left : 0; */
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.11);
+}
+.logo{
+    width: 6%;
+    font-family: "dancing script", cursive;
+    font-weight: bolder;   
+    justify-content: space-between;
+}
+/* <a> & <img> inline element not response (width and height) */
+.logo img{
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 50%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.header{
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin: 20px;
+}
+button{
+    color: white;
+    font-size: medium;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 7px;
+    cursor: pointer; 
+}
+
+/* About */
+#about{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    background-color: bisque;
+}
+.about-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+}
+.about-content img{
+    width: 80%;
+    margin-top: 20px;
+}
+.about-content p{
+    font-size: 17px;
+    text-align: center;
+}
+.about-content ul{
+    display: flex;
+    flex-direction: column;
+}
+.about-content li{
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    text-align: left;
+}
+/* location section */
+.location-section{
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+.location-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+#main{
+    text-align: center;
+    padding: 20px;
+}
+.loc-text{
+    font-size: 17px;
+    text-align: center;
+}
+.location-content img{
+   width: 80%;
+}
+/*parent*/
+ .baking-section{ 
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+} 
+.baking-section h4{
+    text-align: center;
+}
+.baking-section .text{
+    text-align: center;
+}
+.child{
+    width: 32%;
+    display: inline-block;
+}
+.child img {
+    width: 100%;
+    border-radius: 10px;
+}
+h5{
+    text-align: center;
+    margin: 5px 0;;
+} 
+.child p{
+    text-align: center;
+}
+/* last section */
+.iframe{
+    display: flex;
+}
+.my-location{
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+
+}
+iframe{
+    height: 350px;
+    width: 350px;
+    border: none;
+    border-radius: 50px;
+}
+/* Footer */
+.footer{
+    background-color: bisque;
+    height: 100%;
+}
+.footer-container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 70px 0;
+    height: 100%;
+
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-footer .footer-logo{
+    font-weight: bolder;
+    font-size: 18px;
+}
+.footer ul{
+    list-style-type: none;
+}
+.footer-links a {
+    text-decoration: none;
+    color: chocolate;
+}
+.col-footer{
+    width: 25%;
+    padding: 0 50px;
+    background-color: rgba(0, 0, 0, 0.219);
+}
+.col-footer h3{
+    font-size: 18px;
+    color: chocolate;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.col-footer ul li a{
+    color: black;
+    transition: 1s;
+}
+.col-footer ul li a:hover{
+    padding-left: 10px;
+}
+.col-footer ul li:not(:last-child){
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+}
