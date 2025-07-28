@@ -78,13 +78,12 @@ header button{
 /* About */
 #about{
     display: flex;
-    width: 95%;
+    width: 90%;
     height: 100%;
     margin: auto;
     justify-content: space-around;
 }
 .about-content{
-    /* width: 50%; */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -96,6 +95,12 @@ header button{
     width: 100%;
     height: 100%;
     margin-top: 20px;
+}
+@media screen and(max-width: 768px){
+  .about-content {
+   width: 100%;
+   text-align:center;   
+}
 }
 /* .about-content p{
     text-align: center;
@@ -134,7 +139,7 @@ header button{
 }
 /*parent*/
 .baking-section{ 
-    width: 70%;
+    width: 80%;
     margin: 10px auto;
 } 
 .baking-section .baking-title{
@@ -144,6 +149,7 @@ header button{
 .child{
     width: 32%;
     display: inline-block;
+    row-gap: 7px;
 }
 .child img{
     width: 100%;
@@ -156,29 +162,49 @@ header button{
 .child p{
     text-align: center;
 }
-/* last section */
+/* site map section */
 .iframe{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: auto;
+    width: 75%;
+    height: 100%;
+}
+.iframe .my-location{
+    width: 50%;
+    margin: 20px auto;
+}
+.my-location label{
+    display: flex;
+    align-items: left;
+    margin: 10px 0;
+}
+.my-location p{
+    margin: 10px 0;
+}
+.my-location input{
+    padding: 20px 35px;
+    margin: 10px;
+    border: 1px solid ;
+    border-radius: 10px;
     width: 70%;
 }
-.my-location{
-    /* display: flex;
-    flex-direction: column; */
-    width: 100%;
-    height: 100%;
-    /* justify-content: space-between; */
-    margin: 10px auto;
-}
-
-iframe{
-    height: 300px;
-    width: 350px;
+.my-location label button{
+    padding: 15px;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
+    background-color: #897554;
+    color: white;
+    cursor: pointer; 
+    margin-left: 15px;
 }
+.my-location iframe{
+    border-radius: 15%;
+    height: 300px;
+    width: 100%;
+} 
+
 /* Footer */
 .footer{
     background-color: rgb(65, 45, 46);
@@ -193,10 +219,11 @@ iframe{
 .row{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 }
-.col-footer .footer-logo{
+.col-footer h3{
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 20px;
 }
 .footer ul{
     list-style-type: none;
@@ -208,30 +235,51 @@ iframe{
 .col-footer{
     width: 25%;
     padding: 0 50px;
+    display: flex;
 }
-.col-footer h3{
-    font-size: 18px;
-    color: chocolate;
-    text-transform: capitalize;
-    margin-bottom: 30px;
+.col-footer .social{
+    display: flex;
+    flex-direction: row;
 }
+
 .col-footer ul li a{
-    transition: 1s;
+    transition: 1s ease-in-out;
 }
 .col-footer ul li a:hover{
-    /* padding-top: 15px; */
-    zoom: 1.5;
+    zoom: 1.2;
+    color: #897554;
 }
 .col-footer .icons{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
+    padding: 20px;
 }
-
+.col-footer .icons i{
+    font-size: 30px;
+    cursor: pointer;
+    transition: .5s ease-in;
+}
+.col-footer .icons i:hover{
+    color: #897554;
+}
 .col-footer ul li:not(:last-child){
     margin-bottom: 10px;
     text-transform: capitalize;
     font-size: 18px;
     font-weight: 600;
+}
+hr{
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    margin: 15px 0;
+}
+.footer-container .copyright{
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    color: black;
+}
+.copyright a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
