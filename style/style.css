@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Miniver&display=swap');
-
+:root{
+    --font-color-1: #072434;
+    --font-color-2: #ffffff;
+    --btn-color: #897554;
+    --footer-color: rgba(0, 0, 0, 0.712);
+    --font--size: 1.2rem;
+    --border-radius-btn: 7px;
+}
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +22,7 @@
     /* you should add right & left : 0; */
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.11);
+    background-color: rgba(22, 13, 24, 0.11);
 }
 .navbar .logo{
     width: 8%;
@@ -41,6 +48,31 @@
 p{
     font-size: 1.2rem;
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .navbar .logo{
+        width: 20%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) { 
+    .navbar .logo{
+        width: 15%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
+    .navbar .logo{
+        width: 10%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {...}
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {...}
 /* landing section */
 .container{
     background-image: url("../media/bg copy.jpg");
@@ -97,21 +129,32 @@ header button{
     height: 100%;
     margin-top: 20px;
 }
-@media screen and(max-width: 768px){
-  .about-content {
-   width: 100%;
-   text-align:center;   
-}
-}
-
 .about-content ul{
     color: #072434;
     display: flex;
     flex-direction: column;
-    list-style: symbols(circle);
+    list-style: symbols(circle); 
 }
 .about-content ul li{
     text-align: left;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #about {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-content{
+        width: 100%;
+        text-align: center;
+    }
+    .about-content img{
+        width: 100%;
+        height: auto;
+    }
+    .about-content ul li{
+        text-align: center;
+    }
 }
 /* location section */
 .location-section{
@@ -136,7 +179,38 @@ header button{
     text-align: center;
 }
 .location-content img{
-   width: 80%;
+   width: 100%;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .location-section{
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(99, 65, 102, 0.288);
+    }
+    .location-content{
+        width: 100%;
+        text-align: center;
+    }
+    .location-content img{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .location-section{
+        flex-direction: row;
+        justify-content: calc(100% / 3);
+        align-items: center;
+    }
+    .location-content{
+        width: 50%;
+        text-align: left;
+    }
+    .location-content img{
+        width: 80%;
+        height: auto;
+    }
 }
 /*parent*/
 .baking-section{ 
@@ -164,6 +238,7 @@ header button{
 .child p{
     text-align: center;
 }
+
 /* site map section */
 .iframe{
     display: flex;
@@ -180,6 +255,7 @@ header button{
 }
 .my-location label{
     display: flex;
+    flex-direction: column;
     align-items: left;
     margin: 10px 0;
 }
@@ -187,26 +263,40 @@ header button{
     margin: 10px 0;
 }
 .my-location input{
-    padding: 20px 35px;
+    padding: 20px 30px;
     margin: 10px;
     border: 1px solid ;
     border-radius: 10px;
     width: 70%;
 }
 .my-location label button{
-    padding: 15px;
+    width: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: var(--border-radius-btn);
     background-color: #897554;
     color: white;
+    font-size: medium;
+    padding: 10px;
+    margin-top: 10px;
     cursor: pointer; 
     margin-left: 15px;
 }
 .my-location iframe{
-    border-radius: 15%;
+    border-radius: var(--border-radius-btn);
     height: 300px;
     width: 100%;
 } 
+@media only screen and (max-width: 600px) {
+    .iframe{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .iframe .my-location{
+        width: 100%;
+    }
+}
 /* Footer */
 .footer{
     background-color: rgb(65, 45, 46);
@@ -221,11 +311,15 @@ header button{
 .row{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    justify-content: flex-start;
+    width: calc(100% /5 -20px);
+    margin: auto;
 }
 .col-footer h3{
+    color: var(--btn-color);
     font-weight: bolder;
     font-size: 20px;
+    margin-bottom: 10px;
 }
 .footer ul{
     list-style-type: none;
@@ -242,23 +336,25 @@ header button{
 .col-footer .social{
     display: flex;
     flex-direction: row;
+    text-align: center;
 }
 .col-footer ul li a{
-    transition: 1s ease-in-out;
+    transition: 1s;
 }
 .col-footer ul li a:hover{
-    zoom: 1.2;
+    zoom: 1.1;
     color: #897554;
 }
 .col-footer .icons{
     display: flex;
+    justify-content: center;
     flex-direction: row;
     padding: 20px;
 }
 .col-footer .icons i{
     font-size: 30px;
     cursor: pointer;
-    transition: .5s ease-in;
+    transition: .5s;
 }
 .col-footer .icons i:hover{
     color: #897554;
@@ -270,25 +366,56 @@ header button{
     font-weight: 600;
 }
 hr{
-    border: 1px solid rgba(0, 0, 0, 0.226);
+    border: 1px solid rgba(0, 0, 0, 0.315);
     margin: 15px 0;
 }
 .footer-container .copyright{
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
-    color: black;
+    color: var(--btn-color);
 }
 .copyright a{
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    color: var(--btn-color);
+}
+@media only screen and (max-width: 600px) {
+    .footer-container{
+        width: 100%;
+    }
+    .row{
+        width: 100%;
+        flex-direction: column;
+    }
+    .col-footer{
+    width: 50%;
+    padding: 0 50px;
+    display: flex;
+}
 }
 /* blog section */
-.landing-blog{
+.landing{
     width: 100%;
     height: 100vh;
     background-image: url(../media/about-sction.jpg);
     background-position: center center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#072434;
+}
+.landing h1{
+    margin-bottom: 15px;
+}
+/* blog posts */
+.blog-section{
+    width: 35%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.blog-section .blog-post img{
+    width: 100%;
 }
