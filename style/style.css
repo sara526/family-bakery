@@ -4,11 +4,12 @@
     --font-color-1: #072434;
     --font-color-2: #ffffff;
     --btn-color: #897554;
+    --btn1-color: #f9f4f1;
     --footer-color: rgba(0, 0, 0, 0.712);
     --font-size-p-xl: 1.5rem;
     --font--size-p-l: 1.2rem;
     --font-size-s: 0.9rem;
-    --font-size-header: 2.5rem;
+    --font-size-header: 2.7rem;
     --font-size-sub-header: 1.7rem;
     --font-weigth: 700;
     --border-radius-btn: 7px;
@@ -32,7 +33,7 @@
     background-color: rgba(22, 13, 24, 0.11);
 }
 .navbar .logo{
-    width: 8%;
+    width: 7%;
 }
 /* <a> & <img> inline element not response (width and height) */
 .navbar .logo img{
@@ -58,21 +59,21 @@ p{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .navbar .logo{
-        width: 20%;
+        width: 18%;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) { 
     .navbar .logo{
-        width: 15%;
+        width: 12%;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) { 
     .navbar .logo{
-        width: 10%;
+        width: 6%;
     }
 }
 .container{
@@ -91,8 +92,12 @@ p{
     color: white;
     margin: 20px;
 }
+header h1{
+    font-size: var(--font-size-header);
+}
 .header p{
     padding: 10px 0;
+    font-size: var(--font-size-p-xl);
 }
 header button{
     color: white;
@@ -124,6 +129,9 @@ header button{
     padding: 20px;
     margin-top: 15px;
     color: #072434;
+}
+.about-content h2{
+    font-size: var(--font-size-sub-header);
 }
 .about-content img{
     width: 100%;
@@ -175,6 +183,9 @@ header button{
     text-align: center;
     padding: 20px;
 }
+.location-content h3{
+    font-size: var(--font-size-sub-header);
+}
 .loc-text{
     font-size: 17px;
     text-align: center;
@@ -223,6 +234,9 @@ header button{
     margin: 20px 0;
     text-align: center;
 }
+.baking-section .baking-title h3{
+    font-size: var(--font-size-sub-header);
+}
 .child{
     width: 32%;
     display: inline-block;
@@ -268,6 +282,9 @@ header button{
     flex-direction: column;
     align-items: left;
     margin: 10px;
+}
+.my-location  h3{
+    font-size: var(--font-size-sub-header);
 }
 .my-location p{
     margin: 10px 0;
