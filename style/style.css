@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Miniver&display=swap');
 :root{
+    --bg-color: #F1E7E7;
     --font-color-1: #072434;
     --font-color-2: #ffffff;
     --btn-color: #897554;
     --footer-color: rgba(0, 0, 0, 0.712);
-    --font--size: 1.2rem;
+    --font-size-p-xl: 1.5rem;
+    --font--size-p-l: 1.2rem;
+    --font-size-s: 0.9rem;
+    --font-size-header: 2.5rem;
+    --font-size-sub-header: 1.7rem;
+    --font-weigth: 700;
     --border-radius-btn: 7px;
+    --box-shadow: 0  12px 12px rgba(96, 56, 97, 0.158);
 }
 *{
     margin: 0;
@@ -68,12 +75,6 @@ p{
         width: 10%;
     }
 }
-
-/* Large devices (laptops/desktops, 992px and up) 
-@media only screen and (min-width: 992px) {...}
-/* Extra large devices (large laptops and desktops, 1200px and up) 
-@media only screen and (min-width: 1200px) {...}
-/* landing section */
 .container{
     background-image: url("../media/bg copy.jpg");
     background-position: center center; 
@@ -238,6 +239,12 @@ header button{
 .child p{
     text-align: center;
 }
+@media only screen and (max-width: 600px){
+    .child{
+    width: 100%;
+    display: inline;
+}
+}
 
 /* site map section */
 .iframe{
@@ -247,6 +254,7 @@ header button{
     margin: auto;
     width: calc(100% - 40px);
     height: 100%;
+    background-color: var(--bg-color);
     color: #072434;
 }
 .iframe .my-location{
@@ -399,7 +407,7 @@ hr{
 .landing{
     width: 100%;
     height: 100vh;
-    background-image: url(../media/about-sction.jpg);
+    background-image: url(../media/bakery-blog.jpg);
     background-position: center center;
     background-size: cover;
     display: flex;
@@ -410,30 +418,82 @@ hr{
 }
 .landing h1{
     margin-bottom: 15px;
+    font-size: var(--font-size-header);
+}
+.landing p{
+    font-size: var(--font-size-p-xl);
 }
 /* blog posts */
-.grid-container{
-    display: grid;
-    grid-template-columns: min-content;
-    gap: 10px;
-    width: 80%;
-    margin: auto;
-    /* width: 35%;
-    margin: auto;
-    display: flex;
-    flex-direction: column; */
+.blog-images{
+    padding: 10px;
+    background-color: #F1E7E7;
 }
-.grid-container > div{
-    width: 40%;
-    height: 100%;
-    box-shadow: 0 0 10px rgba(99, 65, 102, 0.158);
+.blog-container{
+   display: flex;
+   flex-wrap: wrap;
+   padding: 4px;
 }
-.grid-container .item{
+.blog-images h2{
     text-align: center;
-    padding: 20px;
-    grid-column: 1 / span 2;
+    font-size: var(--font-size-sub-header);
+}
+.blog-container > div{
+    width: calc(100% / 3 - 30px);
+}
+.blog-container .col-item{
+    margin: 10px;
+    vertical-align: text-top;
+}
+.blog-container .col-item img{
+    width: 100%;
+    height: 250px;
+    border-radius: 30%;
+    box-shadow: var(--box-shadow);
+    transition: .5s ease-in;
+}
+.blog-images img:hover{
+  transform: scale(1.05);
+}
+.blog-container .col-item p{
+    padding: 10px;
+    font-size: var(--font-size-sub-img);
+}
+@media only screen and (max-width: 600px){
+    .blog-container > div{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .blog-container .col-footer{
+        width: 100%;
+        text-align: center;
+    }
+}
+.btn-container{
+    background-image: url(../media/chef.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    background-color: var(--bg-color);
+}
+.btn-container h3{
+    font-size: var(--font-size-p-xl);
+}
+.btn-container input[type= "email"]{
+    padding: 10px;
+    width: 400px;
+    border-radius: var(--border-radius-btn);
+    font-size: var(--font-size-s);
+}
+.btn-container .btn-1{
+    padding: 10px;
+    width: 400px;
+    border-radius: var(--border-radius-btn);
+    font-size: var(--font-size-l);
 }
 
-/* .blog-section .blog-post img{
-    width: 100%;
-} */
