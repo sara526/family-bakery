@@ -224,7 +224,7 @@ header button{
         height: auto;
     }
 }
-/*parent*/
+/*Baking Section Styling*/
 .baking-section{ 
     color: #072434;
     width: 80%;
@@ -270,6 +270,7 @@ header button{
     height: 100%;
     background-color: var(--bg-color);
     color: #072434;
+    gap: 20px;
 }
 .iframe .my-location{
     display: flex;
@@ -330,23 +331,29 @@ header button{
     height: 100%;
 }
 .footer-container{
-    max-width: 1170px;
     margin: auto;
-    padding: 70px 0;
+    padding: 30px 0;
     height: 100%;
 }
-.row{
+ .footer-container .row{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     width: calc(100% /5 -20px);
     margin: auto;
 }
+.row .col-footer{
+    flex-direction: column;
+    width: 25%;
+    padding: 0 50px;
+    display: flex;
+}
 .col-footer h3{
     color: var(--btn-color);
     font-weight: bolder;
     font-size: 20px;
     margin-bottom: 10px;
+    text-align: start;
 }
 .footer ul{
     list-style-type: none;
@@ -355,16 +362,7 @@ header button{
     text-decoration: none;
     color: #ffff;
 }
-.col-footer{
-    width: 25%;
-    padding: 0 50px;
-    display: flex;
-}
-.col-footer .social{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-}
+
 .col-footer ul li a{
     transition: 1s;
 }
@@ -374,9 +372,7 @@ header button{
 }
 .col-footer .icons{
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    padding: 20px;
+
 }
 .col-footer .icons i{
     font-size: 30px;
@@ -420,7 +416,7 @@ hr{
     display: flex;
 }
 }
-/* Blog section */
+/* Start Blog page > Styling */
 .landing{
     width: 100%;
     height: 100vh;
@@ -436,7 +432,15 @@ hr{
 .landing h1{
     margin-bottom: 15px;
     font-size: var(--font-size-header);
+    animation: Color 3s infinite alternate-reverse;
 }
+@keyframes Color {
+    0%   { color: #00FFFF; } 
+    50%  { color: #1E90FF; } 
+    70%  {color: #FFA07A; }
+    100% { color:  #8A2BE2;} 
+}
+
 .landing p{
     font-size: var(--font-size-p-xl);
 }
@@ -449,6 +453,7 @@ hr{
    display: flex;
    flex-wrap: wrap;
    padding: 4px;
+   margin: auto;
 }
 .blog-images h2{
     text-align: center;
@@ -512,5 +517,6 @@ hr{
     width: 400px;
     border-radius: var(--border-radius-btn);
     font-size: var(--font-size-l);
+    color: white;
 }
 
